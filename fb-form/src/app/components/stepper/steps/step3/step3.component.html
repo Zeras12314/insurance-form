@@ -1,0 +1,25 @@
+<div [formGroupName]="'step3'" class="step3-form">
+    <!-- Question 1 -->
+    <div class="question q1">
+        <label [innerHTML]="step3.savingsSufficiency.label">
+        </label>
+        <mat-radio-group formControlName="savingsSufficiency">
+            <mat-radio-button [value]="step3.savingsSufficiency.option1">
+                {{step3.savingsSufficiency.option1}}
+            </mat-radio-button>
+            <mat-radio-button [value]="step3.savingsSufficiency.option2">
+                {{step3.savingsSufficiency.option2}}
+            </mat-radio-button>
+            <mat-radio-button [value]="step3.savingsSufficiency.option3">
+                {{step3.savingsSufficiency.option3}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <div class="question q2">
+        <label [innerHTML]="step3.monthlyExpenses.label"></label>
+        <mat-form-field appearance="outline" class="full-width">
+            <input matInput type="text" formControlName="monthlyExpenses"
+                placeholder="{{ step3.monthlyExpenses.placeholder }}" />
+        </mat-form-field>
+    </div>
+</div>

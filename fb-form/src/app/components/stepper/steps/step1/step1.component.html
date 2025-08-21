@@ -1,0 +1,51 @@
+<div [formGroupName]="'step1'" class="step1-form">
+  <!-- Dependents Question -->
+  <div class="question">
+    <label [innerHTML]="step1.dependents.label"></label>
+    <div class="option-group">
+      <mat-radio-group formControlName="dependents" class="radio-group">
+        <mat-radio-button value="Yes">{{ step1.yes }}</mat-radio-button>
+        <mat-radio-button value="No">{{ step1.no }}</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <!-- Monthly Support -->
+  <div class="question">
+    <label [innerHTML]="step1.monthlySupport.label"></label>
+    <mat-form-field appearance="outline" class="full-width">
+      <input
+        matInput
+        type="text"
+        formControlName="monthlySupport"
+        placeholder="{{ step1.monthlySupport.placeholder }}"
+      />
+    </mat-form-field>
+  </div>
+
+  <!-- Support Duration -->
+  <div class="question">
+    <label [innerHTML]="step1.supportDuration.label"></label>
+    <mat-form-field appearance="outline" class="full-width">
+      <input
+        matInput
+        type="text"
+        formControlName="supportDuration"
+        placeholder="{{ step1.supportDuration.placeholder }}"
+      />
+    </mat-form-field>
+  </div>
+
+  <!-- Financial Obligations -->
+  <div class="question">
+    <label [innerHTML]="step1.obligations.label"></label>
+    <mat-form-field appearance="outline" class="full-width">
+      <input
+        matInput
+        type="text"
+        formControlName="obligations"
+        placeholder="{{ step1.obligations.placeholder }}"
+      />
+    </mat-form-field>
+  </div>
+</div>

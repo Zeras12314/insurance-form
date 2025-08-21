@@ -1,0 +1,119 @@
+{
+  "header": {
+    "logo": "assets/images/logo.png",
+    "headline": "Start your insurance journey the right way by asking these guide questions:",
+    "bulbImage": "assets/images/Light-bulb.png",
+    "subtitle": [
+      "What benefits should I get?",
+      "How much coverage do I need?",
+      "When should I apply?"
+    ],
+    "subtitleSm": "Take this <strong>FREE</strong> quick test to know!"
+  },
+  "stepper": {
+    "steps": "Step",
+    "btn": {
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit"
+    }
+  },
+  "step1": {
+    "dependents": {
+      "label": "Does someone financially depend on you other than yourself? *"
+    },
+    "monthlySupport": {
+      "label": "How much of your monthly income goes to your dependents? *",
+      "placeholder": "i.e. 30,000"
+    },
+    "supportDuration": {
+      "label": "For how long will your dependents still need your financial support? *",
+      "placeholder": "i.e. 15 years"
+    },
+    "obligations": {
+      "label": "Financial obligations (mortgage, loan, etc.) *",
+      "placeholder": "i.e. 1,000,000 or N/A"
+    },
+    "yes": "Yes",
+    "no": "No"
+  },
+  "step2": {
+    "question": "When a serious illness costing P1,000,000 strikes today, where do you plan to get money to pay for it? *",
+    "savings": {
+      "label": "Savings"
+    },
+    "relativesLoan": {
+      "label": "Loan from relatives"
+    },
+    "govLoan": {
+      "label": "Apply Government Loan"
+    },
+    "sellAssets": {
+      "label": "Sell assets"
+    },
+    "donation": {
+      "label": "Raise donation from others"
+    },
+    "companyInsurance": {
+      "label": "I have company insurance"
+    },
+    "personalInsurance": {
+      "label": "I have personal insurance"
+    },
+    "insurancePreference": {
+      "label": "Do you prefer having your personal insurance cover everything when this situation arises? *",
+      "option1": "Yes, I want a peace of mind",
+      "option2": "I'm okay with my options above"
+    }
+  },
+  "step3": {
+    "savingsSufficiency": {
+      "label": "When you become unfit to work due to illness or disability, can your savings now support your lifestyle today? *",
+      "option1": "Yes, it will last me at least 6 months",
+      "option2": "Yes, my savings is up to 1 year of my expenses",
+      "option3": "No, I need help from others"
+    },
+    "monthlyExpenses": {
+      "label": "How much is your current lifestyle? (approximate monthly expenses) *",
+      "placeholder": "i.e. 50,000 a month"
+    }
+  },
+  "step4": {
+    "existingInsurance": {
+      "activePlan": {
+        "label": "Any existing insurance plan that is still active? *",
+        "placeholder": "i.e. Prulife Prulink Assurance Account, Sunlife Maxilink"
+      },
+      "benefits": {
+        "label": "What are the benefits you have from your existing Plan? *",
+        "option1": "Life Insurance",
+        "option2": "Critical Illness Coverage",
+        "option3": "Disability Coverage",
+        "option4": "I don't remember",
+        "option5": "Not Applicable (I don't have existing Plan)"
+      }
+    }
+  },
+  "step5": {
+    "resultDelivery": {
+      "label": "You're done! Where do you want to receive your result?"
+    },
+    "fullName": {
+      "label": "Your name is *",
+      "placeholder": "Full Name"
+    },
+    "dateOfBirth": {
+      "label": "Your date of birth *",
+      "placeholder": "Date of birth",
+      "note": "Check if you input the correct YEAR of birth"
+    },
+    "phoneNumber": {
+      "label": "Your phone number is *",
+      "placeholder": "Phone"
+    },
+    "email": {
+      "label": "Where you want to receive the report *",
+      "placeholder": "email@gmail.com"
+    }
+  }
+}

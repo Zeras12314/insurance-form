@@ -1,0 +1,19 @@
+<section class="header">
+    <div class="header-logo">
+        <img src="assets/images/logo.png" alt="logo">
+    </div>
+    <div class="header-headline">
+        <h1 [innerHTML]="header.headline"></h1>
+    </div>
+    <div class="header-bulb">
+        <img src="assets/images/Light-bulb.png" alt="bulb">
+    </div>
+    <div class="header-subtitle">
+        <ul class="header-subtitle-lists">
+            @for (item of header.subtitle; track $index) {
+            <li [innerHTML]="item"></li>
+            }
+        </ul>
+        <div class="header-subtitle-sm" [innerHTML]="header.subtitleSm"></div>
+    </div>
+</section>

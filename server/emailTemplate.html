@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 20%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>User Form Submission - {{fullNameHeader}}</h2>
+
+    <h3>Step 1 - Financial Obligations</h3>
+    <p>Dependents: {{dependents}}</p>
+    <p>Monthly Support: {{monthlySupport}}</p>
+    <p>Support Duration: {{supportDuration}}</p>
+    <p>Obligations: {{obligations}}</p>
+
+    <h3>Step 2 - Illness Funding</h3>
+    <table>
+        <tr>
+            <th>Source</th>
+            <th>Selected</th>
+        </tr>
+        <tr>
+            <td>Savings</td>
+            <td>{{savings}}</td>
+        </tr>
+        <tr>
+            <td>Relatives Loan</td>
+            <td>{{relativesLoan}}</td>
+        </tr>
+        <tr>
+            <td>Gov Loan</td>
+            <td>{{govLoan}}</td>
+        </tr>
+        <tr>
+            <td>Sell Assets</td>
+            <td>{{sellAssets}}</td>
+        </tr>
+        <tr>
+            <td>Donation</td>
+            <td>{{donation}}</td>
+        </tr>
+        <tr>
+            <td>Company Insurance</td>
+            <td>{{companyInsurance}}</td>
+        </tr>
+        <tr>
+            <td>Personal Insurance</td>
+            <td>{{personalInsurance}}</td>
+        </tr>
+    </table>
+    <p>Preference: {{insurancePreference}}</p>
+
+    <h3>Step 3 - Savings & Expenses</h3>
+    <p>Sufficiency: {{savingsSufficiency}}</p>
+    <p>Monthly Expenses: {{monthlyExpenses}}</p>
+
+    <h3>Step 4 - Existing Insurance</h3>
+    <p>Existing Insurance: {{existingInsurance}}</p>
+    <table>
+        <tr>
+            <th>Benefit</th>
+            <th>Selected</th>
+        </tr>
+        <tr>
+            <td>Life Insurance</td>
+            <td>{{lifeInsurance}}</td>
+        </tr>
+        <tr>
+            <td>Critical Illness</td>
+            <td>{{criticalIllness}}</td>
+        </tr>
+        <tr>
+            <td>Disability Coverage</td>
+            <td>{{disabilityCoverage}}</td>
+        </tr>
+        <tr>
+            <td>Don’t Remember</td>
+            <td>{{dontRemember}}</td>
+        </tr>
+        <tr>
+            <td>Not Applicable</td>
+            <td>{{notApplicable}}</td>
+        </tr>
+    </table>
+
+    <h3>Step 5 - Personal Info</h3>
+    <p>Full Name: {{fullName}}</p>
+    <p>Date of Birth: {{dateOfBirth}}</p>
+    <p>Phone Number: {{phoneNumber}}</p>
+    <p>Email: {{email}}</p>
+
+</body>
+
+</html>

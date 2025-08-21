@@ -1,0 +1,33 @@
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.thank-you-card {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2563eb;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .thank-you-card {
+    max-width: 500px;
+  }
+}

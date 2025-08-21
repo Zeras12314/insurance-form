@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+// ===== SCSS RESET =====
+
+// Variables (optional)
+$base-font-family: sans-serif;
+$base-font-size: 100%; // 16px default
+$base-line-height: 1.5;
+$base-bg-color: #fff;
+$base-text-color: #000;
+
+// 1. Remove default margins, paddings & set box-sizing
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 2. Base html & body styles
+html {
+  font-size: $base-font-size;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  background-color: $base-bg-color;
+  color: $base-text-color;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 16px; /* mobile */
+}
+
+// 3. Remove list styles
+ul,
+ol {
+  list-style: none;
+}
+
+// 4. Links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// 5. Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// 6. Tables
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// 7. Form elements
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+// 8. Quotes
+blockquote,
+q {
+  quotes: none;
+
+  &::before,
+  &::after {
+    content: "";
+    content: none;
+  }
+}
+
+// 9. HTML5 elements block display
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}

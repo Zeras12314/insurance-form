@@ -1,0 +1,32 @@
+<div [formGroupName]="'step4'" class="step4-form">
+    <!-- Question 1 -->
+    <div class="question q1">
+        <label [innerHTML]="step4.existingInsurance.activePlan.label"></label>
+        <mat-form-field appearance="outline" class="full-width">
+            <input matInput type="text" formControlName="existingInsurance"
+                placeholder="{{ step4.existingInsurance.activePlan.placeholder }}" />
+        </mat-form-field>
+    </div>
+    <!-- Question 1 -->
+    <div class="question q2">
+        <label [innerHTML]="step4.existingInsurance.benefits.label"></label>
+        <div class="option-group" formGroupName="benefits">
+            <mat-checkbox formControlName="lifeInsurance">
+                {{ step4.existingInsurance.benefits.option1 }}
+            </mat-checkbox>
+            <mat-checkbox formControlName="criticalIllness">
+                {{ step4.existingInsurance.benefits.option2 }}
+            </mat-checkbox>
+            <mat-checkbox formControlName="disabilityCoverage">
+                {{ step4.existingInsurance.benefits.option3 }}
+            </mat-checkbox>
+            <mat-checkbox formControlName="dontRemember">
+                {{ step4.existingInsurance.benefits.option4 }}
+            </mat-checkbox>
+            <mat-checkbox formControlName="notApplicable">
+                {{ step4.existingInsurance.benefits.option5 }}
+            </mat-checkbox>
+        </div>
+    </div>
+
+</div>

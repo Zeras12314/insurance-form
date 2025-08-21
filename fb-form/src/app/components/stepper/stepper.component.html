@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="form-container">
+  <div class="step-info">
+    <p>{{ stepper.steps }} {{ currentStep }} / {{ totalSteps }}</p>
+
+  </div>
+  <mat-progress-bar mode="determinate" [value]="(currentStep / totalSteps) * 100">
+  </mat-progress-bar>
+
+  <!-- Loader -->
+  <div class="loader-overlay" *ngIf="isSubmitting">
+    <div class="loader"></div>
+    <p>Submitting data...</p>
+  </div>
+
+  <!-- Parent Form -->
+  <form [formGroup]="stepperForm">
+    <!-- Step content -->
+    <ng-container [ngSwitch]="currentStep">
+      <app-step1 *ngSwitchCase="1" formGroupName="step1"></app-step1>
+      <app-step2 *ngSwitchCase="2" formGroupName="step2"></app-step2>
+      <app-step3 *ngSwitchCase="3" formGroupName="step3"></app-step3>
+      <app-step4 *ngSwitchCase="4" formGroupName="step4"></app-step4>
+      <app-step5 *ngSwitchCase="5" formGroupName="step5"></app-step5>
+    </ng-container>
+
+    <!-- Navigation -->
+    <div class="step-actions">
+      <button type="button" (click)="prevStep()" [disabled]="currentStep === 1" [innerHTML]="stepper.btn.back"></button>
+      <button type="button" (click)="currentStep === totalSteps ? onSubmit() : nextStep()"
+        [disabled]="!stepperForm.get('step' + currentStep)?.valid"
+        [innerHTML]="currentStep === totalSteps ? stepper.btn.submit : stepper.btn.next"></button>
+    </div>
+  </form>
+</div>

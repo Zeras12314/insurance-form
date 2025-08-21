@@ -1,0 +1,32 @@
+<div [formGroupName]="'step2'" class="step2-form">
+    <!-- Question 1 -->
+    <div class="question q1">
+        <label [innerHTML]="step2.question">
+
+        </label>
+        <div class="option-group" formGroupName="illnessFunding">
+            <mat-checkbox formControlName="savings">{{step2.savings.label}}</mat-checkbox>
+            <mat-checkbox formControlName="relativesLoan">{{step2.relativesLoan.label}}</mat-checkbox>
+            <mat-checkbox formControlName="govLoan">{{step2.govLoan.label}}</mat-checkbox>
+            <mat-checkbox formControlName="sellAssets">{{step2.sellAssets.label}}</mat-checkbox>
+            <mat-checkbox formControlName="donation">{{step2.donation.label}}</mat-checkbox>
+            <mat-checkbox formControlName="companyInsurance">{{step2.companyInsurance.label}}</mat-checkbox>
+            <mat-checkbox formControlName="personalInsurance">{{step2.personalInsurance.label}}</mat-checkbox>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question q2">
+        <label [innerHTML]="step2.insurancePreference.label">
+        </label>
+
+        <mat-radio-group formControlName="insurancePreference">
+            <mat-radio-button value="peaceOfMind">
+                {{step2.insurancePreference.option1}}
+            </mat-radio-button>
+            <mat-radio-button value="okayWithOptions">
+                {{step2.insurancePreference.option2}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>

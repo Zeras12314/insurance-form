@@ -1,0 +1,29 @@
+.step5-form {
+  .question {
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+
+    mat-radio-button,
+    mat-checkbox {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fafafa;
+      transition: background 0.2s, border-color 0.2s;
+
+      &:hover {
+        background: #f0f0f0;
+        border-color: #ccc;
+      }
+    }
+
+    .full-width {
+      width: 100%;
+    }
+  }
+}
