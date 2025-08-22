@@ -4,11 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && ng run fb-form:server",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:fb-form": "node dist/fb-form/server/server.mjs",
-    "vercel-build": "npm run build && cp dist/fb-form/server/server.mjs dist/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
