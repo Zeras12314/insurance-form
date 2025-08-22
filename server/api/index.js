@@ -18,7 +18,17 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors()); // Allow Angular (http://localhost:4200) to access
+// ✅ Allow requests from your Angular dev server
+app.use(
+  cors({
+    origin: [
+      "http://localhost:4200",
+      "https://insurance-form-eight.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 app.use(express.json()); // Parse JSON bodies
 
 // Load email template
