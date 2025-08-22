@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:fb-form": "node dist/fb-form/server/server.mjs",
-    "vercel-build": "npm run build"
+    "vercel-build": "npm run build && cp dist/fb-form/server/server.mjs dist/server.mjs"
   },
   "private": true,
   "dependencies": {
