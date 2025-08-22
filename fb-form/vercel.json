@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "dist/fb-form/server/server.mjs", "use": "@vercel/node" },
+    { "src": "dist/fb-form/browser/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/fb-form/server/server.mjs"
+    }
+  ]
+}
