@@ -2,18 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "fb-form/src/server.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "fb-form/dist/fb-form/browser/**",
-      "use": "@vercel/static"
+      "src": "fb-form/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/fb-form" }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "fb-form/src/server.ts"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
