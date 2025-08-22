@@ -1,9 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "dist/fb-form/server/server.mjs", "use": "@vercel/node" }
+    {
+      "src": "angular.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/fb-form" }
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "dist/fb-form/server/server.mjs" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
