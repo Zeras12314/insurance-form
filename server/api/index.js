@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import serverless from "serverless-http";
+require("./bin/www");
 
 dotenv.config();
 
