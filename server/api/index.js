@@ -32,7 +32,7 @@ app.use(
 app.use(express.json()); // Parse JSON bodies
 
 // Load email template
-const templatePath = path.join(__dirname, "emailTemplate.html");
+const templatePath = path.join(__dirname, "../emailTemplate.html");
 const template = fs.readFileSync(templatePath, "utf-8");
 
 // Helper: Replace placeholders with form data
