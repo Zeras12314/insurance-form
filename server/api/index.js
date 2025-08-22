@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -9,24 +8,38 @@ import serverless from "serverless-http";
 
 dotenv.config();
 
-// Fix __dirname in ES Module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.json()); // Parse JSON bodies
 
-// Middleware
-app.use(
-  cors({
-    origin: [
-      "http://localhost:4200",
-      "https://insurance-form-eight.vercel.app",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+// ✅ Custom CORS middleware to handle preflight properly
+const allowedOrigins = [
+  "http://localhost:4200",
+  "https://insurance-form-server.vercel.app",
+];
+
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+
+  // Handle preflight
+  if (req.method === "OPTIONS") return res.sendStatus(200);
+
+  next();
+});
 
 // Load email template
 const templatePath = path.join(__dirname, "../emailTemplate.html");
