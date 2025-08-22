@@ -122,7 +122,7 @@ export class StepperComponent {
       this.isSubmitting = true; // show loader
       const formData = this.stepperForm.value;
 
-      fetch('http://localhost:5000/submit-form', {
+      fetch('https://insurance-form-eight.vercel.app/', {
         // ✅ Your Express backend
         method: 'POST',
         body: JSON.stringify(formData),
