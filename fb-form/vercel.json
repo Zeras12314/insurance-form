@@ -1,5 +1,8 @@
 {
   "builds": [
-    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist/fb-form/browser" } }
+    { "src": "angular.json", "use": "@vercel/static-build", "config": { "distDir": "fb-form/dist/fb-form" } }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
