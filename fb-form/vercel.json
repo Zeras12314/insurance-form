@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "client/dist/fb-form/browser/**",
+      "src": "dist/fb-form/browser/**",
       "use": "@vercel/static"
     }
   ],
