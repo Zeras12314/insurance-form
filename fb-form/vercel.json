@@ -1,8 +1,7 @@
 {
-  "builds": [
-    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "fb-form/dist/fb-form" } }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "buildCommand": "ng build --configuration production",
+  "outputDirectory": "dist/fb-form/browser",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
