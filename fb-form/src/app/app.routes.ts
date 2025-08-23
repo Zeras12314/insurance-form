@@ -6,12 +6,12 @@ import { NgModule } from '@angular/core';
 export const routes: Routes = [
   { path: '', component: StepperComponent }, // your form
   { path: 'thank-you', component: ThankYouPageComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { useHash: true }) // ✅ add useHash here
+    RouterModule.forRoot(routes, { useHash: true }), // ✅ add useHash here
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
