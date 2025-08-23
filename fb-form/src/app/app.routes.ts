@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 export const routes: Routes = [
   { path: '', component: StepperComponent }, // your form
   { path: 'thank-you', component: ThankYouPageComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
 ];
 @NgModule({
   imports: [
