@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "client/dist/<your-project-name>/browser/**",
+      "src": "client/dist/fb-form/browser/**",
       "use": "@vercel/static"
     }
   ],
@@ -9,3 +9,4 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+
