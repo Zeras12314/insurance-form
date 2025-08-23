@@ -18,7 +18,6 @@ import content from '../../../../public/assets/content.json';
 import { Step5Component } from './steps/step5/step5.component';
 import { Router } from '@angular/router';
 import { HeaderComponent } from '../../shared/header/header.component';
-import { AppRoutingModule } from '../../app.routes';
 
 @Component({
   selector: 'app-stepper',
@@ -27,7 +26,6 @@ import { AppRoutingModule } from '../../app.routes';
     CommonModule,
     MatProgressBarModule,
     ReactiveFormsModule,
-    AppRoutingModule,
     HeaderComponent,
     Step1Component,
     Step2Component,
