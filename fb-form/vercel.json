@@ -1,9 +1,15 @@
 {
-  "version": 2,
   "builds": [
-    { "src": "dist/fb-form/browser/**", "use": "@vercel/static" }
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/fb-form/browser" }
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/dist/fb-form/browser/index.html" }
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
