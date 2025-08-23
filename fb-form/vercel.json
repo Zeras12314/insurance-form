@@ -1,13 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": { "includeFiles": ["dist/fb-form/**"] }
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/dist/fb-form/browser/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
